@@ -342,7 +342,7 @@ public abstract class ARActivity extends /*AppCompat*/Activity implements Camera
     @Override
     public void cameraPreviewStarted(int width, int height, int rate, int cameraIndex, boolean cameraIsFrontFacing) {
 
-        if (ARToolKit.getInstance().startWithPushedVideo(width, height, null, cameraIndex, cameraIsFrontFacing)) {
+        if (ARToolKit.getInstance().startWithPushedVideo(width, height, null, null, cameraIndex, cameraIsFrontFacing)) {
             // Expects Data to be already in the cache dir. This can be done with the AssetUnpacker.
             Log.i(TAG, "cameraPreviewStarted(): Camera initialised");
         } else {

@@ -186,9 +186,9 @@ public class ARToolKit {
             return false;
         }
 
-        debugImageData = new byte[frameWidth * frameHeight * 4];
-        debugImageColors = new int[frameWidth * frameHeight];
-        debugBitmap = Bitmap.createBitmap(frameWidth, frameHeight, Bitmap.Config.ARGB_8888);
+//        debugImageData = new byte[frameWidth * frameHeight * 4];
+//        debugImageColors = new int[frameWidth * frameHeight];
+//        debugBitmap = Bitmap.createBitmap(frameWidth, frameHeight, Bitmap.Config.ARGB_8888);
 
         return true;
     }
@@ -346,7 +346,8 @@ public class ARToolKit {
      */
     public boolean convertAndDetect1(byte[] frame, int frameSize) {
 
-        if ((!isNativeInited()) || (frame == null)) {
+        if ((frame == null)) {
+//        if ((!isNativeInited()) || (frame == null)) {
             return false;
         }
 
@@ -369,7 +370,8 @@ public class ARToolKit {
      */
     public boolean convertAndDetect2(ByteBuffer[] framePlanes, int[] framePlanePixelStrides, int[] framePlaneRowStrides) {
 
-        if ((!isNativeInited()) || (framePlanes == null)) {
+        if ((framePlanes == null)) {
+//        if ((!isNativeInited()) || (framePlanes == null)) {
             return false;
         }
 
